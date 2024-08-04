@@ -1,13 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <main>
+
+
+        <div id="main-container">
+
+            <div id="resume" class="container"> 
+
+                <div class="item item_1">
+                    <input type="file" class="add-file" id="files" label="Your Foto">
+                    <img class="image1" id="img1" alt="Загрузи меня">
+                </div>
+    
+                <div class="item item_2">
+                    <p class="headers" style="font-size: 10px;">Hello 👋🏻 I’m</p>
+                    <div>
+                        <input type="text" placeholder="Your Name" class="name-input">
+                        <input type="text" placeholder="Your Role" class="role-input">
+                    </div>
+                </div>
+    
+                <div class="item item_3">
+                    <p class="headers">Languages</p>
+                    <div>
+                        <div>
+                            <input type="text" value="English" class="input_2">
+                            <input type="range" min="0" max="100" step="1" value="50"> 
+                        </div>
+                        <div>
+                            <input type="text" value="Spanish" class="input_2">
+                            <input type="range" min="0" max="100" step="1" value="50"> 
+                        </div>
+                        <!-- <div>
+                            <input type="text" value="English" class="input_2">
+                            <input type="range" min="0" max="100" step="1" value="50"> 
+                        </div> -->
+                    </div>
+                </div>
+    
+                <div class="item item_4">
+                    <p class="headers">Experience</p>
+                    <div class="experience">
+    
+                        <div style="background-color: #28D979; color: white" class="exp">
+                            <div class="date-exp1">
+                                <input style="background-color: #28D979; color: white;" type="date" class="small-text">
+                                <p class="most-recent small-text">most recent</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <input type="text" style="background-color: #28D979; color: white" value="Your Position" class="text">
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+    
+                        <div class="exp">
+                            <input class="date-input small-text" type="date">
+                            <div>
+                                <div>
+                                    <input type="text" style="background-color: white" value="Your Position" class="text">
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+    
+                        <div class="exp">
+                            <input class="date-input small-text" type="date">
+                            <div>
+                                <div>
+                                    <input type="text"  style="background-color: white" value="Your Position" class="text">
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="item item_5">
+                    <p class="headers">Tools</p>
+                    <div class="tools">
+                        <!-- <div class="f"></div> -->
+                        <div class="tool">
+                            <select class="tool-type">
+                                <option style="display:none">Select One</option>
+                                <option>Programming</option>
+                                <option>Design</option>
+                                <option>No-code</option>
+                                <option>AI</option>
+                            </select>
+    
+                            <input type="buttom" readonly value="+" id="addTool-1" onclick="toolButtomClick(id)" class="ripple tool-buttom">
+                        </div>
+                        <div class="tool">
+                            <select class="tool-type">
+                                <option style="display:none">Select One</option>
+                                <option>Programming</option>
+                                <option>Design</option>
+                                <option>No-code</option>
+                                <option>AI</option>
+                            </select>
+    
+                            <input type="buttom" readonly value="+" id="addTool-2" onclick="toolButtomClick(id)" class="ripple tool-buttom">
+                        </div>
+                        <div class="tool">
+                            <select class="tool-type">
+                                <option style="display:none">Select One</option>
+                                <option>Programming</option>
+                                <option>Design</option>
+                                <option>No-code</option>
+                                <option>AI</option>
+                            </select>
+    
+                            <input type="buttom" readonly value="+" id="addTool-3" onclick="toolButtomClick(id)" class="ripple tool-buttom">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="item item_6">
+                    <p class="headers">Education</p>    
+                    <div class="education">
+    
+                        <div style="background-color: #28D979; color: white" class="ed">
+                            <div class="ed1">
+                                <input style="background-color: #28D979; color: white; margin: 0px; width: 30px; border-radius: 20px;" type="number" min="1900" max="2024" placeholder="2024" class="text">
+                                <p style="color: white; margin: 0px;">-</p>
+                                <input style="background-color: #28D979; color: white; margin: 0px; width: 30px;" type="number" min="1900" max="2024" placeholder="2024" class="text">
+                            </div>
+                            <div class="ed2">
+                                <input type="text" style="background-color: #28D979; color: white; margin: 0px;" class="text" placeholder="Name" style="background-color: #28D979; color: white;">
+                                <input type="text" style="background-color: #28D979; color: white;margin: 0px; width: 100%; height: 60%; white-space: normal;" class="small-text" placeholder="#tools" style="background-color: #28D979; color: white;">
+                            </div>
+                            <input type="text" style=" background-color: #28D979; color: white;margin: 0px auto; border-radius: 20px;" placeholder="Place" class="ed3 text">
+                        </div>
+    
+                        <div class="ed">
+                            <input type="date" style="background-color: white; margin: 0px" class="ed1 text">
+                            <div class="ed2">
+                                <input type="text" style="background-color: white; margin: 0px;" class="text" placeholder="Track" style="background-color: #28D979; color: white;">
+                                <input type="text" style="background-color: white; margin: 0px; width: 100%; height: 60%; white-space: normal;" class="small-text" placeholder="#tegs" style="background-color: #28D979; color: white;">
+                            </div>
+                            <input type="text" style="background-color: white; margin: 0px auto" placeholder="Platform" class="ed3 text">
+                        </div>
+    
+                        <div class="ed">
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="item item_7">
+    
+                    <div class="interests">
+                        <p class="headers">Interests</p>
+                        <div id="add-interest">
+                            <input type="button" value="+" onclick="interestButtomClick()" class="ripple interest_buttom">
+                        </div>
+                    </div>
+    
+                    <div class="contacts">
+                        <p class="headers">Let´s chat! I´m ready to work on excinting projects</p>
+                        <input type="email" placeholder="name@example.com" class="contacts-input">
+                    </div>
+                </div>
+    
+            </div>  
+    
+            <button id="download-pdf" class="ripple text PDF-export-button">Export to PDF</button>
+
+        </div>
+
+
+    </main>
+
+    <script src="./js/script.js"></script>
+    <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+    </script>
+</body>
 </html>
