@@ -42,20 +42,17 @@ function toolButtomClick(id) {
     addToolDiv.appendChild(toolInput);
 }
 
-document.getElementById('download-pdf')
-    .addEventListener('click', () => {
-        const element = document.getElementById('main-container');
-        const options = {
-            // filename: 'GFG.pdf',
-            // margin: 0,
-            // image: { type: 'jpeg', quality: 0.98 },
-            // html2canvas: { scale: 2 },
-            // jsPDF: {
-            //     unit: 'in',
-            //     format: 'letter',
-            //     orientation: 'portrait'
-            // }
-        };
-
-        html2pdf().set(options).from(element).save();
-    });
+document.getElementById('download-pdf').addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+  
+    html2canvas(document.getElementById('resume'), { scale: 2 }).then(
+      (canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        pdf.save('resume.pdf');
+      }
+    );
+});

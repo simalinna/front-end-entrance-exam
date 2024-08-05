@@ -108,6 +108,12 @@
   height: 30%;
 }
 
+.date-exp1-1 {
+  display: flex;
+  /* justify-content: space-between; */
+  /* height: 30%; */
+}
+
 p {
   font-family: 'Poppins';
 }
@@ -145,11 +151,6 @@ input:invalid {
   width: 90%;
 }
 
-.name-input:focus {
-  border-color: #008CBA;
-  box-shadow: 0 0 5px 2px #008CBA;
-}
-
 .role-input {
   width: 90%;
 }
@@ -173,7 +174,7 @@ img.alt {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  /* font-family: 'Poppins'; */
+  font-family: 'Poppins';
   text-align: center;
   line-height: 50px;
   /* margin: 12px; */
@@ -228,6 +229,16 @@ img.alt {
   margin: 6px auto;
   flex: 1;
   width: 95%;
+}
+
+.role-company {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-description {
+  display: flex;
+  /* width: 100%; */
 }
 
 .education {
@@ -303,6 +314,11 @@ img.alt {
   background-color: #6eb9f7;
   background-size: 100%;
   transition: background 0s;
+}
+
+.inputs:focus {
+  border-color: #008CBA;
+  box-shadow: 0 0 5px 2px #008CBA;
 }
 
 /* .f {
